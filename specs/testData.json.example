@@ -1,0 +1,6 @@
+{
+  "appUrl": "http://feedgrabber.com.localhost:3000/",
+  "emailCO": "email",
+  "passwordCO": "password",
+  "questionnaireTitle": "questionnaire_title"
+}
