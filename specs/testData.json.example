@@ -3,4 +3,16 @@
   "emailCO": "email",
   "passwordCO": "password",
   "questionnaireTitle": "questionnaire_title"
+  "questionTitleRadio": "Radio",
+  "questionCategoryRadio": "Radio",
+  "questionTitleCheckbox": "Checkbox",
+  "questionCategoryCheckbox": "Checkbox",
+  "questionTitleParagraph": "Paragraph",
+  "questionCategoryParagraph": "Paragraph",
+  "questionTitleScaled": "Scaled",
+  "questionCategoryScaled": "Scaled",
+  "questionTitleDate": "Date",
+  "questionCategoryDate": "Date",
+  "questionTitleFileUpload": "FileUpload",
+  "questionCategoryFileUpload": "FileUpload"
 }
