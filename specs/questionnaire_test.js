@@ -4,7 +4,6 @@ const variables = require('./testData.json');
 const AuthActions = require('./Login/Login_pa');
 const authSteps = new AuthActions();
 
-
 function userLogin(email, password) {
     authSteps.openAuthPage();
     authSteps.openSignInBox();
@@ -14,13 +13,10 @@ function userLogin(email, password) {
     authSteps.pressSelectCompanyButton();
     authSteps.enterPassword(password);
     authSteps.pressSignInButton();
-
-
 }
 
 describe('Questionnaire Tests', () => {
-
-    beforeEach(() =>{
+    beforeEach(() => {
         browser.maximizeWindow();
         browser.url(variables.appUrl);
     });
@@ -28,10 +24,8 @@ describe('Questionnaire Tests', () => {
     afterEach(() => {
         browser.reloadSession();
     });
-    
-    
-    it('Questionnaire CRUD Workflow', () =>{
+
+    it('Questionnaire CRUD Workflow', () => {
         userLogin(variables.emailCO, variables.passwordCO);
     });
 });
-
