@@ -2,8 +2,14 @@ const assert = require('assert');
 const variables = require('./testData.json');
 
 const AuthActions = require('./Login/Login_pa');
-const authSteps = new AuthActions();
+const QuestActions = require('./Questionnaire/Questionnaire_pa');
+const MenuActions = require('./Menu/Menu_pa');
 
+
+
+const authSteps = new AuthActions();
+const questSteps = new QuestActions();
+const menuSteps = new MenuActions();
 
 function userLogin(email, password) {
     authSteps.openAuthPage();
@@ -32,6 +38,17 @@ describe('Questionnaire Tests', () => {
     
     it('Questionnaire CRUD Workflow', () =>{
         userLogin(variables.emailCO, variables.passwordCO);
+        menuSteps.goToQuestPage();
+        questSteps.openAddQuestForm();
+        questSteps.enterQuestTitle(variables.questionnaireTitle);
+        questSteps.saveQuest();
+        assert(questSteps.getQuestName(), variables.questionnaireTitle);
+        // 
+        questSteps.openEditQuestForm();
+        questSteps.enterQuestTitle(variables.questionnaireTitleEdited);
+        assert(questSteps.getQuestName(), variables.questionnaireTitleEdited);
+
+
     });
 });
 

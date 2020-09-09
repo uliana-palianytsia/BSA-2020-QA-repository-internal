@@ -28,6 +28,15 @@ class QuestActions {
 
     }
 
+    getQuestName() {
+        questionnaire.createdQuestionnaire.waitForDisplayed(2000);
+        return questionnaire.createdQuestionnaire.getText();
+    }
+
+    openEditQuestForm() {
+        questionnaire.editQuestTitleButton.waitForDisplayed(2000);
+        return questionnaire.editQuestTitleButton.getText();
+    }
 
 
   
