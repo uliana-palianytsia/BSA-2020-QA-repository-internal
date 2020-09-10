@@ -3,4 +3,5 @@
   "emailCO": "email",
   "passwordCO": "password",
   "questionnaireTitle": "questionnaire_title"
+  "questionnaireTitleEdited": "questionnaire_title_edited"
 }
